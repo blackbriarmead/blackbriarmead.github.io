@@ -167,11 +167,21 @@
 							senderEmail: email,
 							messageText: message,
 						},
+						dataType: 'xml',
 						success: function (data) {
 							//$("#form_output").html(data);
+							$( '#contactForm' ).each(function(){
+								this.reset();
+							});
+							//var responseBody = xml.find()
+							alert("Your message was succesfully sent");
 						},
 						error: function (jXHR, textStatus, errorThrown) {
-							alert(errorThrown);
+							//var xml = $.parseXML( errorThrown );
+							//var responseBody = xml.find()
+							alert("There was an error with your request - make sure your email is valid.");
+							console.log(errorThrown);
+							//alert(errorThrown);
 						}
 					});
 				});
