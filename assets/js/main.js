@@ -4,6 +4,10 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
+//import Console from "console";
+//const { Console } = require("console");
+
 (function($) {
 
 	var	$window = $(window),
@@ -140,6 +144,37 @@
 					if (event.keyCode == 27)
 						$menu._hide();
 
+			});
+
+			
+			$(document).ready(function () {
+				$('#contactForm').on('submit', function(e) {
+					e.preventDefault();
+					console.log("function called");
+					var name = $(this).find('[name=name]').val();
+					var email = $(this).find('[name=email]').val();
+					var message = $(this).find('[name=message]').val();
+					
+					console.log("name: " + name);
+					console.log("email: " + email);
+					console.log("message: " + message);
+					
+					$.ajax({
+						url : "https://us-central1-blackbriarmead-website.cloudfunctions.net/contactMeForm",
+						type: "GET",
+						data: {
+							senderName: name,
+							senderEmail: email,
+							messageText: message,
+						},
+						success: function (data) {
+							//$("#form_output").html(data);
+						},
+						error: function (jXHR, textStatus, errorThrown) {
+							alert(errorThrown);
+						}
+					});
+				});
 			});
 
 })(jQuery);
