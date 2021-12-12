@@ -4005,10 +4005,20 @@ input, select, textarea {
 
 		}
 
+
+.rectwrapper {
+	border-radius:5px;
+	background-color: #20212b;
+	height: fit-content;
+	width: fit-content;
+	position: relative;
+}
+
+
 /* Footer */
 
 	#footer .inner {
-		padding: 5em 0 3em 0 ;
+		padding: 5em 2em 3em 2em ;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -4021,7 +4031,7 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		margin: 0 auto;
+		margin: 10em auto 5em auto;
 		width: 55em;
 	}
 
