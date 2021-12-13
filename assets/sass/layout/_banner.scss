@@ -36,6 +36,19 @@
 			}
 		}
 
+		.image {
+			border-radius: 100%;
+			margin: 0 _size(section-spacing, large) _size(element-margin) 0;
+			width: 15em;
+			overflow: hidden;
+			-ms-flex: 1;
+			flex: 1;
+			img {
+				border-radius: 100%;
+				width: 100%;
+			}
+		}
+
 		h2 {
 			@include vendor('transition', (
 				'opacity 0.5s ease',

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "node-sass": "^7.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch assets/sass -o assets/css"
+  }
+}
